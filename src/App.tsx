@@ -14,7 +14,7 @@ function App() {
   const theme = useAppSelector((state) => state.theme.theme);
 
   useEffect(() => {
-    console.log("Current theme:", theme); // Для дебагу
+    console.log("Current theme:", theme);
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
@@ -24,7 +24,6 @@ function App() {
         theme === "dark" ? "bg-[#000000] text-white" : "bg-white text-black"
       }`}
     >
-      
       <Header />
       <Hero />
       <Clients />

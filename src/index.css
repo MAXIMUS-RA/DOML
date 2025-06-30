@@ -10,7 +10,6 @@
   .testimonals-container {
     box-sizing: border-box;
 
-    /* DOML gradient 1 */
     background: linear-gradient(
       267.03deg,
       #00f0ff 4.01%,
@@ -33,5 +32,3 @@
       linear-gradient(90deg, #3b82f6, #9333ea) border-box;
   }
 }
-
-/* Rectangle 8 */

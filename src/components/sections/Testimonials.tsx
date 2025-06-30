@@ -48,7 +48,7 @@ function Testimonials() {
   return (
     <section className="relative testimonals-container max-w-[1467px] min-h-[513px] mx-2 lg:mx-auto mt-[78px] lg:mt-[143px] px-4 md:px-0">
       <div className="block md:hidden ">
-        <div className=" rounded-3xl  p-6 max-w-sm mx-auto min-h-[600px] relative">
+        <div className=" rounded-3xl   max-w-sm mx-auto min-h-[600px] relative">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -58,8 +58,8 @@ function Testimonials() {
               transition={{ duration: 0.5, ease: "easeInOut" }}
               className="flex flex-col items-center text-center h-full"
             >
-              <motion.div 
-                className="w-100 h-100 rounded-3xl overflow-hidden mb-8 mt-4 ml-12 "
+              <motion.div
+                className=" max-w-300 h-auto rounded-3xl overflow-hidden mb-8 mt-4 ml-12 "
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.4 }}
@@ -71,7 +71,7 @@ function Testimonials() {
                 />
               </motion.div>
 
-              <motion.h3 
+              <motion.h3
                 className="font-[Montserrat] text-white leading-[200%] text-xl mb-8 px-2"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ function Testimonials() {
                 {testimonials[currentSlide].text}
               </motion.h3>
 
-              <motion.div 
+              <motion.div
                 className="mt-auto mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -92,9 +92,9 @@ function Testimonials() {
                 <h2 className="font-[Montserrat] font-light text-white text-xl mb-3">
                   {testimonials[currentSlide].position}
                 </h2>
-                <motion.img 
-                  className="mx-auto" 
-                  src={testimonials[currentSlide].company} 
+                <motion.img
+                  className="mx-auto"
+                  src={testimonials[currentSlide].company}
                   alt=""
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -128,7 +128,7 @@ function Testimonials() {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+                    index === currentSlide ? "bg-white" : "bg-white/30"
                   }`}
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.8 }}
@@ -260,11 +260,12 @@ function Testimonials() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <circle cx="6" cy="6" r="6" fill={
-                  index === currentSlide
-                    ? "#FFFFFF"
-                    : "#171717"
-                } />
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="6"
+                  fill={index === currentSlide ? "#FFFFFF" : "#171717"}
+                />
               </motion.svg>
             ))}
           </div>
